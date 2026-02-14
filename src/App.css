@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0e0e11;
+  --color-surface: var(--color-neutral-900);
+  --color-surface-hover: var(--color-neutral-800);
+  --color-border: var(--color-neutral-800);
+  --color-text: var(--color-neutral-200);
+  --color-text-muted: var(--color-neutral-400);
+  --color-accent: var(--color-violet-500);
+  --color-accent-hover: var(--color-violet-600);
+}
