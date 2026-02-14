@@ -45,8 +45,24 @@ export const palettes = {
 };
 
 export function generateColors(count, preset) {
-  const gen = palettes[preset] || palettes.random;
-  const colorsHSL = Array.from({ length: count }, () => gen());
+  let colorsHSL;
+  if (preset === "tonal") {
+    const hue = Math.random() * 360;
+    colorsHSL = Array.from({ length: count }, () =>
+      randomHSL([hue, hue], [30, 85], [25, 85]),
+    );
+  } else if (preset === "complementary") {
+    const hue1 = Math.random() * 360;
+    const hue2 = (hue1 + 180) % 360;
+    colorsHSL = Array.from({ length: count }, (_, i) => {
+      const h = i % 2 === 0 ? hue1 : hue2;
+      return randomHSL([h, h], [40, 90], [30, 80]);
+    });
+    colorsHSL.sort(() => Math.random() - 0.5);
+  } else {
+    const gen = palettes[preset] || palettes.random;
+    colorsHSL = Array.from({ length: count }, () => gen());
+  }
   const hasBright = colorsHSL.some((c) => c.l > 85);
 
   if (!hasBright && count > 0) {

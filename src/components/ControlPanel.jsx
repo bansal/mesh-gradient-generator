@@ -105,6 +105,8 @@ export function ControlPanel({
             <option value="earth">Earthy</option>
             <option value="sunset">Sunset</option>
             <option value="ocean">Ocean</option>
+            <option value="tonal">Tonal</option>
+            <option value="complementary">Complementary</option>
           </select>
         </div>
       </div>
