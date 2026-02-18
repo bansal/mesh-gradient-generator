@@ -18,8 +18,15 @@ export function ControlPanel({
         <h1 className="text-[1.75rem] font-bold tracking-tight mb-1.5 max-[900px]:text-[1.35rem]">
           Mesh Gradient
         </h1>
-        <p className="text-text-muted text-[0.95rem] mb-8">
+        <p className="text-text-muted text-[0.95rem] mb-2">
           Create beautiful random mesh gradients instantly
+        </p>
+        <p className="text-[0.75rem] text-text-muted">
+          Press{" "}
+          <kbd className="inline-block bg-surface border border-border rounded px-1.5 py-0.5 text-[0.72rem] mx-0.5">
+            Space
+          </kbd>{" "}
+          to generate
         </p>
       </div>
       <div className="flex flex-col gap-4 w-full">
@@ -140,19 +147,22 @@ export function ControlPanel({
           ))}
         </div>
       </div>
-
-      <p className="text-center text-[0.75rem] text-text-muted mt-4">
-        Press{" "}
-        <kbd className="inline-block bg-surface border border-border rounded px-1.5 py-0.5 text-[0.72rem] mx-0.5">
-          Space
-        </kbd>{" "}
-        to generate
-      </p>
-      <p className="text-center text-[0.75rem] text-text-muted mt-4">
-        <a href="https://bansal.io" target="_blank" rel="noopener noreferrer">
-          Made by Bansal
+      <div className="flex flex-row items-center justify-between gap-2">
+        <p className="text-[0.75rem] text-text-muted">
+          <a href="https://bansal.io" target="_blank" rel="noopener noreferrer">
+            Made by Bansal
+          </a>
+        </p>
+        <a href="https://pitchwall.co/product/mesh-gradient">
+          <img
+            src="https://pitchwall.co/images/featured/pitchwall-dark.png"
+            width="180"
+            height="60"
+            alt="Featured on PitchWall"
+            className="h-10 w-auto"
+          />
         </a>
-      </p>
+      </div>
     </div>
   );
 }
