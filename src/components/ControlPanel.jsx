@@ -56,16 +56,16 @@ export function ControlPanel({
             htmlFor="color-count"
             className="text-[0.85rem] text-text-muted whitespace-nowrap"
           >
-            Colors
+            Colors ({colorCount})
           </label>
           <input
-            type="number"
+            type="range"
             id="color-count"
             min={3}
             max={8}
             value={colorCount}
             onChange={(e) => setColorCount(parseInt(e.target.value) || 5)}
-            className="bg-bg border border-border text-text rounded-md py-2 px-3 text-[0.85rem] outline-none min-w-[100px] text-right focus:border-accent"
+            className="bg-bg border border-border text-text rounded-md py-2 px-0 text-[0.85rem] outline-none min-w-[100px] text-right focus:border-accent"
           />
         </div>
         <div className="flex justify-between items-center gap-2 w-full">
